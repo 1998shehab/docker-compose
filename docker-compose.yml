@@ -1,0 +1,31 @@
+version: '2.27.1'
+services:
+  mongodb-shehab:
+    image: mongo
+    container_name: mongo-db-shehab
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - volume1:/data/db
+
+  mongo-express-shehab:
+    image: mongo-express
+    container_name: mongoexpress-shehab
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo-db-shehab
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongodb-shehab
+
+networks:
+  shehab-network:
+    driver: bridge
+
+volumes:
+  volume1:
+   name: volume1
+  
