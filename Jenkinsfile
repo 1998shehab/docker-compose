@@ -3,7 +3,7 @@ pipeline {
     agent any
     
     environment {
-        sudo_password = credentials('sudo-password-id') \\ admin
+        sudo_password = credentials('sudo-password-id') // admin
 }        
 
     stages {
