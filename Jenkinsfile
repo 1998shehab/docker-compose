@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('nginx') {
             steps {
-               sh 'Docker-Compose up -d'
+               sh 'docker-Compose up -d'
             }
         }
     }
