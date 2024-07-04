@@ -3,7 +3,7 @@ pipeline {
     agent any
     
     environment {
-        sudo_password = credentials('sudo-password-id') // 1998shehab
+        sudo_password = credentials('sudo-password-id') // 20e0e126-18c5-4798-bade-d19103913d6
 }        
 
     stages {
