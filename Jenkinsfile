@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('nginx') {
             steps {        
-                sh '''echo ${sudo_password} | sudo docker-compose -f /home/yat/Desktop/docker/test1/docker-compose.yml up -d'''
+                sh '''echo ${sudo_password} | sudo -s docker-compose -f /home/yat/Desktop/docker/test1/docker-compose.yml up -d'''
             }
         }
     }
