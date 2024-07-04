@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('nginx') {
             steps {
-               $class: 'DockerComposeBuilder'
+               $class: 'Docker-Compose up -d'
             }
         }
     }
