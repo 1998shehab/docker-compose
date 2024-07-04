@@ -2,7 +2,7 @@
 pipeline {
     agent any
     
-    enviroment {
+    environment {
         sudo_password = credintials('sudo-password-id') // admin
 }        
 
