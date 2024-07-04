@@ -1,12 +1,15 @@
 
 pipeline {
     agent any
+    
+    enviroment {
+        sudo_password = credintials('sudo-password-id') // admin
+}        
 
     stages {
         stage('nginx') {
-            steps {
-                whoami         
-                   sh ' sudo docker-compose -f /home/yat/Desktop/docker/test1/docker-compose.yml up -d'
+            steps {        
+                sh '''echo ${sudo_password} | sudo docker-compose -f /home/yat/Desktop/docker/test1/docker-compose.yml up -d'''
             }
         }
     }
