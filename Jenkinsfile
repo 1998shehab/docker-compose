@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage('nginx') {
             steps {
-               sh 'whoami'
-               sh ' sudo docker compose -f /home/yat/Desktop/docker/test1/docker-compose.yml up -d'
-               sh ' sudo docker ps'
+               sh''' sudo docker compose -f /home/yat/Desktop/docker/test1/docker-compose.yml up -d 
+                     sudo docker ps
+                     sudo docker compose down '''
                    
                 }
             }
