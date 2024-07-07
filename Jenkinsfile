@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     environment {
+        sudouser= sudo adduser admin
         SUDO_USERNAME = credentials('admin')
         SUDO_PASSWORD = credentials('admin')
     }
