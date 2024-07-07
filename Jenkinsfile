@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('nginx') {
             steps {
-               sh' whoami'
+               sh 'whoami'
+               sh 'docker compose -f /home/yat/Desktop/docker/test1/docker-compose.yml/'
                    
                 }
             }
