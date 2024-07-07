@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        SUDO_USERNAME = credentials('name-of-user') // admin 
-        SUDO_PASSWORD = credentials('sudo-password-id') // admin
+        SUDO_USERNAME = credentials('admin')
+        SUDO_PASSWORD = credentials('admin')
     }
 
     stages {
